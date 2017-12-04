@@ -11,7 +11,7 @@ class EmployeeEditor extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    this.setState({employee: nextProps.selected,
+    this.setState({employee: object.assign({},nextProps.selected),
                   originalEmployee: nextProps.selected,
                   notModified: true
       })

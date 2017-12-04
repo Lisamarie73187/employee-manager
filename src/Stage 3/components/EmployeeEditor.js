@@ -12,7 +12,12 @@ class EmployeeEditor extends Component {
 
   // componentWillReceiveProps
 
-  // handleChange
+  handleChange(property,val){
+    this.setState({
+      property: val,
+      notModified: false
+    })
+  }
 
   save() {
     this.state.originalEmployee.updateName(this.state.employee.name);
